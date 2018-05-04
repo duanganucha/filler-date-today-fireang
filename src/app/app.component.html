@@ -1,0 +1,9 @@
+<ul>
+    <li *ngFor="let book of books | async">
+        <pre>{{ book.title }}</pre>
+        <pre>{{ book.timestamp | date : 'shortDate'}}</pre>
+
+    </li>
+</ul>
+<button (click)="addBook()">Add a book!</button>
+<button (click)="filterBooks()">Filter books</button>
